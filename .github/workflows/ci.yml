@@ -20,5 +20,5 @@ jobs:
           git config --local user.name "chris-zhu"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
-          git commit --allow-empty -m "this is an invalid commit at ${{ Date.getTime() }}"
+          git commit --allow-empty -m "this is an invalid commit at ${{ github.repository }}"
           git push
